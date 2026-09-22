@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use("/tasks", tasksRouter);
 app.use("/activity", activityRouter);
-app.use("/reports", reportsRouter);
+app.use("/reports/tasks-summary", reportsRouter);
 
 app.use((req, res, next) => {
   next(new HttpError(404, `Route not found: ${req.method} ${req.originalUrl}`));
